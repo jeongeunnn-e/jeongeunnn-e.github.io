@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Daeun Lee | UNC Chapel Hill</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css crossorigin=anonymous>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+/* === base === */
+.pub-row { display: flex; align-items: center; }
+.social-icons a {
+  display:inline-block; height:2.4rem; width:2.4rem;
+  background-color:transparent; color:#9d9393!important;
+  border-radius:100%; text-align:center; font-size:1.15rem;
+  line-height:2.5rem; margin-right:1rem;
+}
+.social-icons a:last-child { margin-right:0; }
+.social-icons a:hover { background-color:white; color:black; transform: scale(1.2); }
+email { font-size: 14px; font-family: 'Raleway', sans-serif; }
+autocolor { color:#595959; }
+body { font-family: 'Raleway', sans-serif; font-weight: 400; font-size: 14px; }
+.image { border-radius: 0.35em; border: 0; display: inline-block; position: relative; }
+.image.avatar { border-radius: 100%; }
+.image.avatar img { border-radius: 100%; width: 55%; padding: 20px; }
+h1 { font-family: 'Raleway', sans-serif; font-weight: 700; color:#c15b79; margin:0 0 20px; font-size:25px; }
+h2 { font-family: 'Raleway', sans-serif; font-weight: 600; color:#e36b8f; margin:2px 0px 15px; font-size: 130%; }
+h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; font-weight: 500; color:#e36b8f; margin:0 0 16px; }
+p, ul, ol, table, pre, dl { margin:0 0 20px; }
+h1, h2, h3 { line-height:1.1; }
+a { color:#4a7dc0; text-decoration:none; }
+a:hover { color:rgb(119, 146, 255); }
+.wrapper { width:960px; margin:0 auto; }
+strong { color:#222; font-weight:500; }
+small { font-size:11px; }
+img { max-width:100%; }
+header {
+  width:232px; float:left; position:fixed;
+  -webkit-font-smoothing:subpixel-antialiased;
+  padding-top:4.0em; text-align:center;
+}
+section { width:670px; float:right; padding-top:4.0em; padding-bottom:50px; }
+.highlight { background-color: #fee9f6; padding: 0 4px; border-radius: 2px; }
+.text-accent { color: #e36b8f; font-weight: bold; }
+.text-accent-org { color: #1e3a5f; font-weight: bold; }
+position { font-family: 'Raleway', sans-serif; }
+
+/* === publications === */
+:root { --global-bg-color: #ffffff; --global-theme-color: #002D72; --global-hover-color: #ffb81c; }
+.badge {
+  display: inline-block; padding: 0.25em 0.4em; font-size: 75%; font-weight: 700;
+  line-height: 1; text-align: center; white-space: nowrap; vertical-align: baseline;
+  border-radius: 0.125rem; color: #fff !important;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.publications { margin-top: 2rem; }
+.publications h2 { margin-bottom: 1rem; }
+.publications ol.bibliography { list-style: none; padding: 0; margin-top: 0; }
+.publications ol.bibliography li { min-height: 110px; margin-bottom: 0.5rem; }
+.publications ol.bibliography li .abbr { height: 8rem; margin-bottom: 0.5rem; }
+.publications ol.bibliography li .abbr abbr { display: inline-block; background-color: var(--global-theme-color); padding-left: 1rem; padding-right: 1rem; position: absolute; top: 8px; left: 16px; }
+.publications ol.bibliography li .title { font-weight: bolder; }
+.publications ol.bibliography li .links a.btn { color: #000; border: 1px solid #000; padding: 0.1rem 0.5rem; }
+.publications ol.bibliography li .links a.btn:hover { color: var(--global-theme-color); border-color: var(--global-theme-color); }
+.publications ol.bibliography li .teaser { border-radius: 8px; box-shadow: 3px 3px 6px #888; height: 123px; width: 270px; margin-top: 5px; margin-left: 5px; margin-bottom: 5px; object-fit: cover; }
+@media print, screen and (min-width: 480px) { .col-sm-9 { width: 100%; } }
+
+/* ── NEW: 1) Publication hover ── */
+.pub-row {
+  transition: all 0.3s ease;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: -10px -14px;
+}
+.pub-row:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #fef5fa, #f3f0fa);
+  box-shadow: 0 4px 16px rgba(227, 107, 143, 0.13);
+}
+
+/* ── NEW: 3) News timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 44px;
+  margin-top: 12px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(to bottom, #e8a0b8, #c4b5e0);
+  border-radius: 2px;
+}
+.timeline-year {
+  position: relative;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.timeline-year:first-child {
+  margin-top: 0;
+}
+.timeline-year::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e36b8f;
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 0 2px #e36b8f;
+}
+.year-label {
+  font-weight: 700;
+  font-size: 14px;
+  color: #c15b79;
+  letter-spacing: 0.5px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -31px;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #b4a7d6;
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 0 1px #b4a7d6;
+}
+.timeline-month {
+  font-weight: 600;
+  color: #b0b0b0;
+  font-size: 12px;
+  display: inline-block;
+  width: 30px;
+  margin-right: 4px;
+}
+
+/* ── NEW: 4) HR gradient ── */
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #e8a0b8, #c4b5e0, transparent);
+  margin: 28px 0;
+}
+
+/* ── NEW: 6) About Me card ── */
+.about-card {
+  background: linear-gradient(135deg, #fef5fa 0%, #f3f0fa 100%);
+  border-radius: 14px;
+  padding: 22px 28px;
+  border: 1px solid rgba(227, 107, 143, 0.1);
+}
+
+@media print, screen and (max-width: 960px) {
+  .pub-row { display: flex; align-items: center; }
+  div.wrapper { width:auto; margin:0; }
+  header, section, footer { float:none; position:static; width:auto; }
+  section { border:1px solid #e5e5e5; border-width:1px 0; padding:20px 0; margin:0 0 20px; }
+  .image.avatar img { border-radius: 100%; width: 117px; padding:20px; }
+}
+@media print, screen and (max-width: 960px) {
+  body { word-wrap:break-word; padding:15px; }
+  header { padding:0; }
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a class="image avatar"><img src="./assets/img/my_new_final2.png" alt="avatar" /></a>
+        <h1>Daeun Lee</h1>
+        <position style="font-size:1.10rem;">Ph.D. Student</position><br>
+        <a href="" rel="noopener"><autocolor>UNC Chapel Hill</autocolor></a><br>
+        <email>daeun@cs.unc.edu</email>
+        <br><br>
+        <div class="social-icons">
+          <a style="margin: 0 5px 0 0" href="#"><i class="ai ai-google-scholar" style="font-size:1.2rem"></i></a>
+          <a style="margin: 0 5px 0 0" href="#"><i class="ai ai-cv" style="font-size:1.3rem;"></i></a>
+          <a style="margin: 0 5px 0 0" href="#"><i class="fab fa-github"></i></a>
+          <a style="margin: 0 5px 0 0" href="#"><i class="fab fa-linkedin"></i></a>
+          <a style="margin: 0 0 0 0" href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <br>
+      </header>
+      <section>
+
+<!-- About Me Card -->
+<div class="about-card">
+<h2>About Me</h2>
+<p>Thanks for visiting my website! ✨ I am a 2nd year Ph.D. student at UNC Chapel Hill, <b><a href="https://murgelab.cs.unc.edu/">MURGe-Lab</a></b> working with Prof. <b><a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a></b>.
+Previously, I was advised by Prof. <b><a href="https://visionai.korea.ac.kr/">Jinkyu Kim</a></b> at Korea University, Prof. <b><a href="http://www.sungjuhwang.com/">Sung Ju Hwang</a></b> at KAIST.
+I have also spent time as a Research Intern at <span class="text-accent-org">Adobe Research</span> (2025) and <span class="text-accent-org">Meta</span> (2026).</p>
+</div>
+
+<hr>
+
+<h2>Research Direction</h2>
+<p>I began my AI research journey through autonomous driving, motivated by its potential to make a large-scale impact on society. Now I am interested in how we can make a better world for underrepresented people using <b>"multimodality"</b>.</p>
+<ul>
+<li><span class="highlight"><b><u>Video (Multimodal) Reasoning / Generation / Understanding</u></b></span> with RL and post-training</li>
+<li><span class="highlight"><b><u>Embodied AI with Sensor Modalities</u></b></span> like Gaze, Audio, 3D LiDAR, HD Maps etc.</li>
+</ul>
+
+<hr>
+
+<!-- News Timeline -->
+<h2>News</h2>
+<div class="timeline">
+  <div class="timeline-year"><span class="year-label">2026</span></div>
+  <div class="timeline-item"><span class="timeline-month">May</span> Join <span class="text-accent-org">Meta Superintelligence Labs</span> for 2026 Summer Research Intern!</div>
+  <div class="timeline-item"><span class="timeline-month">Apr</span> VideoRepair is accepted to <span class="text-accent">ACL 2026 Findings</span> 🌊</div>
+  <div class="timeline-item"><span class="timeline-month">Mar</span> New preprint is out: check out <b><a href="#">VisionCoach</a></b></div>
+  <div class="timeline-item"><span class="timeline-month">Feb</span> StreamGaze is accepted to <span class="text-accent">CVPR 2026</span> 🌅</div>
+
+  <div class="timeline-year"><span class="year-label">2025</span></div>
+  <div class="timeline-item"><span class="timeline-month">Dec</span> New preprint is out: check out <b><a href="#">StreamGaze</a></b> and <b><a href="#">IndustryNav</a></b></div>
+  <div class="timeline-item"><span class="timeline-month">Aug</span> Video-Skill-CoT is accepted to <span class="text-accent">EMNLP 2025 Findings</span> 🇨🇳</div>
+  <div class="timeline-item"><span class="timeline-month">Jun</span> New preprint is out: check out <b><a href="#">Video-Skill-CoT</a></b></div>
+  <div class="timeline-item"><span class="timeline-month">May</span> Join <span class="text-accent-org">Adobe Research</span> for 2025 Summer Research Intern!</div>
+  <div class="timeline-item"><span class="timeline-month">Jan</span> Invited talk at <span class="text-accent-org">Cisco Meraki</span></div>
+
+  <div class="timeline-year"><span class="year-label">2024</span></div>
+  <div class="timeline-item"><span class="timeline-month">Nov</span> New preprint is out: check out <b><a href="#">VideoRepair</a></b></div>
+  <div class="timeline-item"><span class="timeline-month">Aug</span> Started PhD journey at the UNC Chapel Hill <span class="text-accent-org">MURGe-Lab</span> 🎓</div>
+  <div class="timeline-item"><span class="timeline-month">May</span> BECoTTA is accepted to <span class="text-accent">ICML 2024</span> 🇦🇹</div>
+  <div class="timeline-item"><span class="timeline-month">Apr</span> One paper is accepted to <span class="text-accent">CVPRW 2024</span> 🇺🇸</div>
+
+  <div class="timeline-year"><span class="year-label">2023</span></div>
+  <div class="timeline-item"><span class="timeline-month">Jan</span> One paper is oral-presented at <span class="text-accent">WACV 2023</span> 🏝️</div>
+
+  <div class="timeline-year"><span class="year-label">2022</span></div>
+  <div class="timeline-item"><span class="timeline-month">Dec</span> I finished my first research internship at <span class="text-accent-org">NAVER LABS</span>!</div>
+</div>
+
+<hr>
+
+<!-- Publications -->
+<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+<div class="publications">
+<ol class="bibliography">
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/visioncoach.gif" class="teaser img-fluid z-depth-1">
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">VisionCoach: Reinforcing Grounded Video Reasoning via Visual-Perception Prompting</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee</u></b></span>, Shoubin Yu, Yue Zhang, Mohit Bansal</div>
+      <div class="periodical"><em>preprint</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/industry.png" class="teaser img-fluid z-depth-1">
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">IndustryNav: Exploring Spatial Reasoning of Embodied Agents in Dynamic Industrial Navigation</a></div>
+      <div class="author">Yifan Li, Lichi Li, Anh Dao, Xinyu Zhou, Yicheng Qiao, Zheda Mai, <span class="highlight"><b><u>Daeun Lee</u></b></span>, Zichen Chen, Zhen Tan, Mohit Bansal, Yu Kong</div>
+      <div class="periodical"><em>preprint</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/teaser_final_verylarge_v2.gif" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">ACL Findings</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">VideoRepair: Self-Correcting Text-to-Video Generation with Misalignment Detection and Localized Refinement</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee</u></b></span>, Jaehong Yoon, Jaemin Cho, Mohit Bansal</div>
+      <div class="periodical"><em>The 64th Annual Meeting of the Association for Computational Linguistics <b>(ACL) Findings</b>, 2026.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/streamgaze_demo.gif" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">CVPR</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">StreamGaze: Gaze-Guided Temporal Reasoning and Proactive Understanding in Streaming Videos</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee</u></b></span>, Subhojyoti Mukherjee, Branislav Kveton, Ryan A. Rossi, Viet Dac Lai, Seunghyun Yoon, Trung Bui, Franck Dernoncourt, Mohit Bansal</div>
+      <div class="periodical"><em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b>, 2026.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+      <strong><i style="color:#e74d3c"><span style="font-size:11px;">Accepted with strong scores (5/5/5) but desk-rejected because of coauthor's irresponsible reviewing.</span></i></strong>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/video-skill-cot.gif" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">EMNLP Findings</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">Video-Skill-CoT: Skill-based Chain-of-Thoughts for Domain-Adaptive Video Reasoning</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee*</u></b></span>, Jaehong Yoon*, Jaemin Cho, Mohit Bansal</div>
+      <div class="periodical"><em>Empirical Methods in Natural Language Processing <b>(EMNLP) Findings</b>, 2025.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/becotta_v2.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">ICML</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">BECoTTA: Input-dependent Online Blending of Experts for Continual Test-time Adaptation</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee*</u></b></span>, Jaehong Yoon*, Sung Ju Hwang</div>
+      <div class="periodical"><em>International Conference on Machine Learning <b>(ICML)</b>, 2024.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">Code</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/new_hdmap.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">CVPRW</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">HD Maps are Lane Detection Generalizers: A Novel Generative Framework for Single-Source Domain Generalization</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee</u></b></span>, Minhyeok Heo, Jiwon Kim</div>
+      <div class="periodical"><em>CVPR Data-Driven Autonomous Driving Simulation Workshop <b>(CVPRW)</b>, 2024.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/wacv23.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">WACV</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">Resolving Class Imbalance for LiDAR-based Object Detector by Dynamic Weight Average and Contextual Ground Truth Sampling</a></div>
+      <div class="author"><span class="highlight"><b><u>Daeun Lee</u></b></span>, Jinkyu Kim</div>
+      <div class="periodical"><em>IEEE/CVF Winter Conference on Applications of Computer Vision <b>(WACV)</b>, 2023.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="./assets/img/eccv22.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">ECCV</abbr>
+  </div>
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+      <div class="title"><a href="#">Bridging the Domain Gap towards Generalization in Automatic Colorization</a></div>
+      <div class="author">Hyejin Lee, Daehee Kim, <span class="highlight"><b><u>Daeun Lee</u></b></span>, Jinkyu Kim, Jaekoo Lee</div>
+      <div class="periodical"><em>European Conference on Computer Vision <b>(ECCV)</b>, 2022.</em></div>
+    <div class="links">
+      <a href="#" class="btn btn-sm z-depth-0" role="button" style="font-size:12px;">PDF</a>
+    </div>
+  </div>
+</div>
+</li><br>
+
+</ol>
+</div>
+
+<hr>
+
+<h2>Services</h2>
+<ul>
+<li><strong>Conference Reviewer:</strong>
+  <ul>
+  <li>CVPR/ECCV/ICCV 2022-2026</li>
+  <li>AAAI 2025</li>
+  <li>NeurIPS 2025-2026</li>
+  </ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>Misc</h2>
+<p>🧸 I am a big fan of <strong>Sanrio</strong> (Hello Kitty, Mymelody, Kuromi), all teddy bears, and K-POP!<br>
+💐 Always appreciate all of my great advisors and collaborators!</p>
+
+<br>
+<p><small>Powered by Jekyll and <a href="https://github.com/yaoyao-liu/minimal-light" target="_blank" rel="noopener">Minimal Light</a> theme.</small></p>
+
+      </section>
+    </div>
+  </body>
+</html>

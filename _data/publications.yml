@@ -1,0 +1,46 @@
+main:
+  - title: "Personalizing Embodied Multimodal Large Language Model Agents over Long-term User Interactions"
+    authors: <span class="highlight"><b><u>Jeongeun Lee</u></b></span>, Chanyoung Park, Dongha Lee
+    conference_short: arXiv
+    conference: arXiv, 2026.
+    pdf: https://arxiv.org/abs/2605.26256
+    image: ./assets/img/polar.png
+
+  - title: "Personalized Reward Modeling for Text-to-Image Generation"
+    authors: <span class="highlight"><b><u>Jeongeun Lee</u></b></span>, Ryang Heo, Dongha Lee
+    conference_short: ECCV
+    conference: European Conference on Computer Vision <b>(ECCV)</b>, 2026.
+    pdf: https://arxiv.org/abs/2511.19458
+    image: ./assets/img/pigreward_.png
+    
+  - title: "Towards Personalized Conversational Sales Agents: Contextual User Profiling for Strategic Action"
+    authors: Tongyoung Kim*, <span class="highlight"><b><u>Jeongeun Lee*</u></b></span>, Soojin Yoon, Sunghwan Kim, Dongha Lee
+    conference_short: EMNLP Findings
+    conference: Empirical Methods in Natural Language Processing <b>(EMNLP) Findings</b>, 2025.
+    pdf: https://arxiv.org/abs/2504.08754
+    image: ./assets/img/csi.png
+
+  - title: "HIPPO-VIDEO: Simulating Watch Histories with Large Language Models for History-Driven Video Highlighting"
+    authors: <span class="highlight"><b><u>Jeongeun Lee</u></b></span>, Youngjae Yu, Dongha Lee
+    conference_short: COLM
+    conference: Conference on Language Modeling <b>(COLM)</b>, 2025.
+    pdf: https://arxiv.org/abs/2507.16873
+    code: https://github.com/jeongeunnn-e/HIPPO-Video
+    dataset: https://huggingface.co/datasets/jeongeunnn/HIPPO-video
+    image: ./assets/img/hippo_.png
+    
+  - title: "Towards Unified and Adaptive Cross-Domain Collaborative Filtering via Graph Signal Processing"
+    authors: <span class="highlight"><b><u>Jeongeun Lee</u></b></span>, Seongku Kang, Won-Yong Shin, Jeongwhan Choi, Noseong Park, Dongha Lee
+    conference_short: arXiv
+    conference: arXiv, 2024.
+    pdf: https://arxiv.org/abs/2407.12374
+    code: https://github.com/jeongeunnn-e/CGSP
+    image: ./assets/img/cgsp_.png
+
+  - title: "Re-Ex: Revising after Explanation Reduces the Factual Errors in LLM Responses"
+    authors: Juyeon Kim, <span class="highlight"><b><u>Jeongeun Lee*</u></b></span>, Yoonho Chang*, Chanyeol Choi, Junseong Kim, Jy-yong Sohn
+    conference_short: ICLR Workshop
+    conference: ICLR Workshop on Reliable and Responsible Foundation Models, 2024.
+    pdf: https://arxiv.org/abs/2402.17097
+    code: https://github.com/juyeonnn/ReEx
+    image: ./assets/img/reex.jpg

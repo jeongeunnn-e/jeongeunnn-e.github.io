@@ -5,7 +5,7 @@ layout: homepage
 
 ## About Me
 
-I am an 2nd year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. Before, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
+I am a 2nd-year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. Previously, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
 
 If you're interested in collaborating on research or exploring new ideas together, please feel free to connect with me anytime!
 

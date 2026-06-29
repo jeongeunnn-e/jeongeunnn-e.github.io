@@ -11,6 +11,7 @@ main:
     conference_short: ECCV
     conference: European Conference on Computer Vision <b>(ECCV)</b>, 2026.
     pdf: https://arxiv.org/abs/2511.19458
+    page: ./projects/PIGReward/
     image: ./assets/img/pigreward_.png
     
   - title: "Towards Personalized Conversational Sales Agents: Contextual User Profiling for Strategic Action"

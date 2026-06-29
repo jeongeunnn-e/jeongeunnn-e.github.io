@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PIGReward is a personalized reward modeling framework for evaluating and optimizing text-to-image generation with user-conditioned reasoning.">
+  <meta name="keywords" content="PIGReward, personalized reward modeling, text-to-image generation, preference modeling, multimodal reasoning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIGReward: Personalized Reward Modeling for Text-to-Image Generation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+  <section class="hero publication-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Personalized Reward Modeling for Text-to-Image Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://jeongeunnn-e.github.io/" target="_blank" rel="noopener noreferrer">Jeongeun Lee</a>,</span>
+              <span class="author-block"><a href="https://ryang1119.github.io/" target="_blank" rel="noopener noreferrer">Ryang Heo</a>,</span>
+              <span class="author-block"><a href="https://donalee.github.io/" target="_blank" rel="noopener noreferrer">Dongha Lee</a></span>
+            </div>
+            <div class="is-size-5 publication-authors publication-affiliation">
+              <span class="author-block">Yonsei University</span>
+            </div>
+            <div class="is-size-5 publication-authors publication-venue">
+              <span class="author-block">ECCV 2026</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./static/PIGReward.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.19458" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/jeongeunnn/pigreward" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><img class="hf-icon" src="./static/images/huggingface.svg" alt=""></span>
+                  <span>Checkpoint</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/jeongeunnn/pigbench-images" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                  <span class="icon"><img class="hf-icon" src="./static/images/huggingface.svg" alt=""></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section teaser">
+    <div class="container is-max-desktop">
+      <figure class="image publication-image">
+        <img src="./static/images/teaser.png" alt="Motivation for personalized text-to-image evaluation with user-specific criteria.">
+      </figure>
+      <p class="content lead">
+        Universal reward models often miss the visual criteria that matter to individual users. PIGReward learns those criteria from a few pairwise choices and uses them to compare new text-to-image outputs.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Abstract</h2>
+      <div class="content is-size-5">
+        <p>
+          Recent text-to-image models generate semantically coherent images from textual prompts, yet evaluating how well they align with individual user preferences remains an open challenge. Conventional evaluation methods, including general reward functions and similarity-based metrics, fail to capture the diversity and complexity of personal visual tastes.
+        </p>
+        <p>
+          We present <strong>PIGReward</strong>, a personalized reward modeling framework that dynamically generates user-conditioned evaluation dimensions and assesses images through structured chain-of-thought reasoning. PIGReward uses self-bootstrapping over limited reference data to construct rich user contexts, enabling personalization without user-specific training. Beyond evaluation, PIGReward provides personalized feedback for prompt optimization, improving alignment between generated images and individual intent.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Method</h2>
+      <div class="content is-size-5">
+        <p>
+          PIGReward decomposes personalized evaluation into two learned components. A preference reasoner &pi; converts each user reference pair into an explicit natural-language rationale. A reward model &phi; then induces user-specific evaluation dimensions from those rationales and performs dimension-wise comparison for a target image pair.
+        </p>
+      </div>
+
+      <div class="method-stage">
+        <h3 class="title is-4 subsection-title">Bootstrapping Preference Rationales</h3>
+        <p class="content is-size-5">
+          The preference reasoner learns to produce faithful rationales by contrasting correct and incorrect explanations for the same image pair.
+        </p>
+        <figure class="image publication-image method-figure method-figure-pi">
+          <img src="./static/images/training-pi.png" alt="Training process for the preference reasoner with contrastive DPO rationales.">
+        </figure>
+      </div>
+
+      <div class="method-stage">
+        <h3 class="title is-4 subsection-title">Training the Reward Model</h3>
+        <p class="content is-size-5">
+          The reward model is distilled from filtered chain-of-thought evaluation trajectories, learning to score image pairs with user-conditioned dimensions.
+        </p>
+        <figure class="image publication-image method-figure">
+          <img src="./static/images/training-phi.png" alt="Training process for the personalized reward model with CoT evaluation data and supervised fine-tuning.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">PIGBench</h2>
+      <div class="columns is-vcentered is-variable is-6">
+        <div class="column is-5">
+          <figure class="image publication-image compact-image">
+            <img src="./static/images/pigbench-example.png" alt="Examples from PIGBench with user-specific rankings.">
+          </figure>
+        </div>
+        <div class="column">
+          <div class="content is-size-5">
+            <p>
+              We introduce <strong>PIGBench</strong>, a user-study benchmark for realistic personalized text-to-image evaluation. Each instance contains a user-specific ranking of four SDXL-generated images from one abstract prompt.
+            </p>
+            <p>
+              PIGBench is built from 100 curated image sets and 75 user records, with reference lengths varying from 5 to 15 examples to test personalization under sparse feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section results-section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Results</h2>
+      <div class="content is-size-5">
+        <p>
+          PIGReward consistently outperforms conventional reward models, LVLM-based judges, and reference-conditioned baselines across personalized T2I evaluation benchmarks.
+        </p>
+      </div>
+      <div class="table-container">
+        <table class="table is-fullwidth is-striped result-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Pick-a-Pic</th>
+              <th>PIP</th>
+              <th>PASTA</th>
+              <th>PIGBench</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UnifiedReward-Think</td>
+              <td>59.92</td>
+              <td>35.28</td>
+              <td>65.71</td>
+              <td>66.04</td>
+            </tr>
+            <tr>
+              <td>Qwen2.5-VL-7B w/ reference</td>
+              <td>61.52</td>
+              <td>49.95</td>
+              <td>50.34</td>
+              <td>54.72</td>
+            </tr>
+            <tr>
+              <td>GPT-4o w/ reference</td>
+              <td>46.90</td>
+              <td>76.23</td>
+              <td>68.80</td>
+              <td>64.15</td>
+            </tr>
+            <tr class="ours-row">
+              <td>PIGReward</td>
+              <td>63.76</td>
+              <td>77.84</td>
+              <td>75.43</td>
+              <td>84.91</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Accuracy with tie is shown for each benchmark.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Why Similarity Is Not Enough</h2>
+      <div class="content is-size-5">
+        <p>
+          Similarity metrics can overfit to surface resemblance between the target image and prior liked images. PIGReward instead infers the user's underlying evaluative criteria, such as detail, composition, symbolism, or realism, and applies them to the target pair.
+        </p>
+      </div>
+      <figure class="image publication-image">
+        <img src="./static/images/similarity-example.png" alt="Failure case of similarity-based metrics for personalized evaluation.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Personalized Prompt Optimization</h2>
+      <div class="columns is-variable is-6">
+        <div class="column">
+          <figure class="image publication-image">
+            <img src="./static/images/prompt-optimization.png" alt="Overview of personalized prompt optimization using PIGReward.">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image publication-image">
+            <img src="./static/images/prompt-optimization-winrate.png" alt="Win rates for personalized prompt optimization.">
+          </figure>
+        </div>
+      </div>
+      <div class="content is-size-5">
+        <p>
+          When used as a user-conditioned reward function, PIGReward provides preference feedback for prompt model training. The optimized prompts produce images that align more closely with individual visual preferences than generic prompt optimization.
+        </p>
+      </div>
+      <h3 class="title is-4 subsection-title">Qualitative Study</h3>
+      <figure class="image publication-image">
+        <img src="./static/images/prompt-optimization-qualitative.jpg" alt="Qualitative results for personalized prompt optimization across users and baselines.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section bibtex-section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">BibTeX</h2>
+      <pre><code>@article{lee2025personalized,
+  title={Personalized Reward Modeling for Text-to-Image Generation},
+  author={Lee, Jeongeun and Heo, Ryang and Lee, Dongha},
+  journal={arXiv preprint arXiv:2511.19458},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+</body>
+</html>

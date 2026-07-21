@@ -23,12 +23,12 @@ My research focuses on <b>personalized AI that leverages real-world multimodal d
 
 <div class="timeline">
   <div class="timeline-year"><span class="year-label">2026</span></div>
-  <div class="timeline-item"><span class="timeline-month">Jun</span> <b>PIGReward</b><img src="./assets/img/icons/pig.png" alt="" class="news-icon"> is accepted to <span class="text-accent">ECCV 2026</span> 🇸🇪.</div>
+  <div class="timeline-item"><span class="timeline-month">Jun</span> <b>PIGReward</b><img src="./assets/img/icons/pig.png" alt="" class="news-icon"> is accepted to <span class="text-accent">ECCV 2026</span> 🇸🇪</div>
   <div class="timeline-item"><span class="timeline-month">May</span> New preprint is out: <b><a href="https://arxiv.org/abs/2605.26256">POLAR</a></b>.</div>
 
   <div class="timeline-year"><span class="year-label">2025</span></div>
-  <div class="timeline-item"><span class="timeline-month">Sep</span> <b>CSI</b> is accepted to <span class="text-accent">EMNLP Findings 2025</span> 🇨🇳.</div>
-  <div class="timeline-item"><span class="timeline-month">Jul</span> <b>HIPPO-VIDEO</b><img src="./assets/img/icons/hippo.png" alt="" class="news-icon"> is accepted to <span class="text-accent">COLM 2025</span> 🇨🇦.</div>
+  <div class="timeline-item"><span class="timeline-month">Sep</span> <b>CSI</b> is accepted to <span class="text-accent">EMNLP Findings 2025</span> 🇨🇳</div>
+  <div class="timeline-item"><span class="timeline-month">Jul</span> <b>HIPPO-VIDEO</b><img src="./assets/img/icons/hippo.png" alt="" class="news-icon"> is accepted to <span class="text-accent">COLM 2025</span> 🇨🇦</div>
 
   <div class="timeline-year"><span class="year-label">2024</span></div>
   <div class="timeline-item"><span class="timeline-month">Jul</span> New preprint is out: <b><a href="https://arxiv.org/abs/2407.12374">CGSP</a></b>.</div>

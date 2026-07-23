@@ -151,11 +151,3 @@
   object-fit: contain;
   vertical-align: -0.2em;
 }
-
-.visitor-map {
-  width: 150px;
-  height: 100px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-}

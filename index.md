@@ -5,7 +5,7 @@ layout: homepage
 
 ## About Me
 
-I am a 2nd-year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://diyonsei.notion.site/Data-Language-Intelligence-Lab-Yonsei-University-7e121249362f42c2bdd1328aeaeb5f4b)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. Previously, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
+I am a final-year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://dli.yonsei.ac.kr)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. Previously, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
 
 If you're interested in collaborating on research or exploring new ideas together, please feel free to connect with me anytime!
 
@@ -15,10 +15,19 @@ If you're interested in collaborating on research or exploring new ideas togethe
 
 ## Research Interest
 
-My research focuses on <b>personalized AI that leverages real-world multimodal data</b>, including videos, images, text, and structured signals such as graphs. During my master’s program, I studied <b>(1) personalized evaluation/benchmark</b>, where (M)LLMs reason over multimodal inputs to generate user preference-conditioned rewards, and <b>(2) agentic frameworks</b>, where LLMs simulate real-world user behaviors. More recently, I have become interested in <b>building personalized AI assistants in egocentric and embodied environments with MLLMs</b>, where agents must understand long-term multimodal context and implicit user intent.
+I aim to build human-supportive AI that can understand and assist people in dynamic, real-world environments. During my master’s, I explored how (M)LLMs can leverage long-term multimodal context across several directions, including:
+
+- <b>personalization</b> in text-to-image generation and video highlight detection
+- agentic frameworks that simulate real-world user behaviors for <b>proactive assistance</b>
+- personalized <b>embodied agent</b> that leverage long-term human-agent interactions for instruction understanding and planning
+
+More recently, I have become interested in how AI agents can learn from continuous input streams to build persistent knowledge about users and the world. In particular, I am interested in:
+
+- <b>wearable AI</b> that integrates diverse sensors and signals to better understand users and their context
+- <b>embodied AI</b> that builds and updates persistent world knowledge over time for reasoning, planning, and action
 
 ---
-
+jeongeunn.github.io/index.md
 ## News
 
 <div class="timeline">

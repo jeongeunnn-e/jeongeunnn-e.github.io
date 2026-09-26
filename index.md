@@ -27,7 +27,6 @@ More recently, I have become interested in how AI agents can learn from continuo
 - <b>embodied AI</b> that builds and updates persistent world knowledge over time for reasoning, planning, and action
 
 ---
-jeongeunn.github.io/index.md
 ## News
 
 <div class="timeline">

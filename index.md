@@ -5,7 +5,7 @@ layout: homepage
 
 ## About Me
 
-I am a final-year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://dli.yonsei.ac.kr)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. Previously, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
+I am a final-year M.S. student in the <b>[Data & Language Intelligence (DLI) Lab](https://dli.yonsei.ac.kr)</b> at [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp), advised by Prof. <b>[Dongha Lee](https://donalee.github.io/)</b>. I am also fortunate to work closely with the <b>[Computational Intelligence & Photography Lab (CIPLAB)](https://www.ciplab.kr/)</b> under the guidance of Prof. <b>Seon Joo Kim</b>. Previously, I received my B.S. in Computer Science from [Yonsei University](https://www.yonsei.ac.kr/sc/index.jsp). 
 
 If you're interested in collaborating on research or exploring new ideas together, please feel free to connect with me anytime!
 
@@ -23,8 +23,8 @@ I aim to build human-supportive AI that can understand and assist people in dyna
 
 More recently, I have become interested in how AI agents can learn from continuous input streams to build persistent knowledge about users and the world. In particular, I am interested in:
 
-- <b>wearable AI</b> that integrates diverse sensors and signals to better understand users and their context
-- <b>embodied AI</b> that builds and updates persistent world knowledge over time for reasoning, planning, and action
+- learning about users, their activities, and their situational context from <b>egocentric experience</b>
+- building and updating <b>persistent knowledge of the physical world</b> to support personalized reasoning, decision-making, and action
 
 ---
 ## News

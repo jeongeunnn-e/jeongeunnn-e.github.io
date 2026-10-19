@@ -31,7 +31,7 @@ More recently, I have become interested in how AI agents can learn from continuo
 
 <div class="timeline">
   <div class="timeline-year"><span class="year-label">2026</span></div>
-  <div class="timeline-item"><span class="timeline-month">Oct 26</span> I started an internship at <b>KRAFTON AI</b>.</div>
+  <div class="timeline-item"><span class="timeline-month">Oct</span> I started an internship at <b>KRAFTON AI</b>.</div>
   <div class="timeline-item"><span class="timeline-month">Jun</span> <b>PIGReward</b><img src="./assets/img/icons/pig.png" alt="" class="news-icon"> is accepted to <span class="text-accent">ECCV 2026</span> 🇸🇪</div>
   <div class="timeline-item"><span class="timeline-month">May</span> New preprint is out: <b><a href="https://arxiv.org/abs/2605.26256">POLAR</a></b>.</div>
 
